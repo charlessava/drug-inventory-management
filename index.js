@@ -102,3 +102,12 @@ console.log(prescribedDrugs)
 // SOLUTION
 
 const newDrugArray = drugs.map((each)=>)
+
+//QUESTION 10:  Use forEach() to count how many drugs are Analgesics.
+let count= 0
+drugs.forEach((each)=>{
+    if(each.category == "Anastegic"){
+        count++
+    })
+console.log(count)
+})
