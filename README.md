@@ -23,6 +23,7 @@ Features
 
 Technologies Used
 - JavaScript (ES6+)
+- HTML5
 
 Installation
 1. Clone the repository: `git clone https://github.com/charlessava/drug-inventory-management.git`
