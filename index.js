@@ -1,31 +1,4 @@
-// var student = [
-//     {
-//         firstName: "ike",
-//         score: 30,
-//         city: "Abia"
-//     },
-//     {
-//         firstName: "Charles",
-//         score: 40,
-//         city: "Abia"
-//     },
-//     {
-//         firstName: "ike",
-//         score: 55,
-//         city: "Abia"
-//     },
-//     {
-//         firstName: "ike",
-//         score: 30,
-//         city: "Abia"
-//     }
-// ]
-
-// student.forEach((each) => {
-//     console.log(each.score)
-// })
-
-
+// an array of drug data set
 const drugs = [
 
     { id: 1, name: "Amoxicillin", category: "Antibiotic", dosageMg: 500, isPrescriptionOnly: true, stock: 120, manufacturer: "Pfizer" },
@@ -69,3 +42,63 @@ const drugs = [
     { id: 20, name: "Folic Acid", category: "Supplement", dosageMg: 5, isPrescriptionOnly: false, stock: 250, manufacturer: "Nature’s Bounty" }
 
 ];
+
+
+// QUESTION 1. Get all drugs that are antibiotics.
+// SOLUTION
+
+// const antibioticDrugs = drugs.map((eachdrug) =>
+//     eachdrug.category.toLowerCase == "Antibiotic");
+
+// console.log(antibioticDrugs)
+
+const antibioticDrugs = drugs.filter((each) =>
+    each.category == 'Antibiotic'                   // Didn't use the return keyword here because I ommited {} which explitly returns each object
+)
+
+// console.log(antibioticDrugs.length)                  //To count how many drugs that are antibiotics
+console.log(antibioticDrugs)
+
+// QUESTION 2: Return an array of drug names in lowercase.
+// SOLUTION
+
+const drugNames = drugs.map((each)=>{
+    return each.name.toLowerCase()
+})
+
+console.log(drugNames)
+
+// QUESTION 3: Write a function that accepts a category and returns all drugs under that category.
+// SOLUTION
+
+function drugCategory(Category){
+    return drugs.filter((each)=>{
+        return each.category === Category
+    })
+    
+}
+
+//console.log(drugCategory('Supplement').length)         to count how many drugs of the input category exist
+console.log(drugCategory('Supplement'))
+
+
+// QUESTION 4: Log each drug’s name and its manufacturer.
+// SOLUTION
+
+const drugNameAndManufacturer = drugs.forEach((each) => {
+    console.log(`The manufacturer of ${each.name} drug is ${each.manufacturer}`)
+});
+
+// QUESTION 5: Return all drugs that require a prescription.
+// SOLUTION
+
+const prescribedDrugs = drugs.filter((each)=>{
+    return each.isPrescriptionOnly == true
+})
+
+console.log(prescribedDrugs)
+
+// QUESTION 6: Return a new array, each item should follow the format: "Drug: [name] - [dosageMg]mg".
+// SOLUTION
+
+const newDrugArray = drugs.map((each)=>)
