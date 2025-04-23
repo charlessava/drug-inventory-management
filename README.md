@@ -25,8 +25,8 @@ Technologies Used
 - JavaScript (ES6+)
 
 Installation
-1. Clone the repository: `git clone https://github.com/your-username/pharmaceutical-data-analysis.git`
-2. Open the project directory: `cd pharmaceutical-data-analysis`
+1. Clone the repository: `git clone https://github.com/charlessava/drug-inventory-management.git`
+2. Open the project directory: `cd /drug-inventory-management`
 3. Run the JavaScript file: `node script.js`
 
 Usage
