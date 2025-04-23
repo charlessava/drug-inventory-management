@@ -28,7 +28,7 @@ Technologies Used
 Installation
 1. Clone the repository: `git clone https://github.com/charlessava/drug-inventory-management.git`
 2. Open the project directory: `cd /drug-inventory-management`
-3. Run the JavaScript file: `node script.js`
+3. Run the JavaScript file: `node index.js`
 
 Usage
 *Example Usage*
