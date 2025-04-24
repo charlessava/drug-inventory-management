@@ -62,7 +62,7 @@ console.log(antibioticDrugs)
 // QUESTION 2: Return an array of drug names in lowercase.
 // SOLUTION
 
-const drugNames = drugs.map((each)=>{
+const drugNames = drugs.map((each) => {
     return each.name.toLowerCase()
 })
 
@@ -71,11 +71,11 @@ console.log(drugNames)
 // QUESTION 3: Write a function that accepts a category and returns all drugs under that category.
 // SOLUTION
 
-function drugCategory(Category){
-    return drugs.filter((each)=>{
+function drugCategory(Category) {
+    return drugs.filter((each) => {
         return each.category === Category
     })
-    
+
 }
 
 //console.log(drugCategory('Supplement').length)         to count how many drugs of the input category exist
@@ -92,7 +92,7 @@ const drugNameAndManufacturer = drugs.forEach((each) => {
 // QUESTION 5: Return all drugs that require a prescription.
 // SOLUTION
 
-const prescribedDrugs = drugs.filter((each)=>{
+const prescribedDrugs = drugs.filter((each) => {
     return each.isPrescriptionOnly == true
 })
 
@@ -101,13 +101,55 @@ console.log(prescribedDrugs)
 // QUESTION 6: Return a new array, each item should follow the format: "Drug: [name] - [dosageMg]mg".
 // SOLUTION
 
-const newDrugArray = drugs.map((each)=>)
-
-//QUESTION 10:  Use forEach() to count how many drugs are Analgesics.
-let count= 0
-drugs.forEach((each)=>{
-    if(each.category == "Anastegic"){
-        count++
-    })
-console.log(count)
+const newDrugArray = drugs.map((each) => {
+    return `Drug: ${each.name}: ${each.dosageMg}mg`
 })
+console.log(newDrugArray)
+
+// QUESTION 7. Write a function that returns all drugs with a stock less than 50.
+// SOLUTION
+
+function getLowStockDrugs(medicationArray) {
+    console.log("These are the drugs details from the array with a stock less than 50")
+    return lowStock = medicationArray.filter((each) => {
+        return each.stock < 50
+    })
+
+}
+
+console.log(getLowStockDrugs(drugs))
+
+// QUESTION 8: Return all drugs that are not prescription-only.
+// SOLUTION
+const unPrescribedDrugs = drugs.filter((each) => {
+    return !each.isPrescriptionOnly
+})
+console.log(unPrescribedDrugs)
+
+
+// QUESTION 9. Write a function that takes a manufacturer name and returns how many drugs are from that company.
+// SOLUTION
+
+
+function manufacturerDrugList(arrayName, companyName) {
+    console.log("These are the number of drugs from the inputed manufacturer")
+    const manufacturerDrug = arrayName.filter((each) => {
+        return each.manufacturer === companyName
+    })
+    console.log(manufacturerDrug.length)
+    return manufacturerDrug.length
+}
+
+manufacturerDrugList(drugs, 'Teva')
+
+
+// QUESTION 10: Use forEach() to count how many drugs are Analgesics.
+// SOLUTION
+
+let count = 0
+drugs.forEach((each) => {
+    if (each.category = "Analgesic") {
+        count++
+    }
+});
+console.log(count)
